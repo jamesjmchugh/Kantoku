@@ -1,8 +1,95 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- Kantoku Theme: Wabi-Sabi aesthetic -->
     <style name="Theme.VisionController" parent="Theme.Material3.Light.NoActionBar">
-        <item name="colorPrimary">@color/purple_500</item>
-        <item name="colorPrimaryVariant">@color/purple_700</item>
-        <item name="colorOnPrimary">@android:color/white</item>
+        <!-- Primary colors -->
+        <item name="colorPrimary">@color/indigo</item>
+        <item name="colorPrimaryVariant">@color/indigo_dark</item>
+        <item name="colorOnPrimary">@color/shironeri</item>
+        
+        <!-- Secondary colors -->
+        <item name="colorSecondary">@color/kincha</item>
+        <item name="colorOnSecondary">@color/sumi</item>
+        
+        <!-- Background -->
+        <item name="android:colorBackground">@color/gofun</item>
+        <item name="colorSurface">@color/gofun</item>
+        <item name="colorOnSurface">@color/sumi</item>
+        
+        <!-- Window background -->
+        <item name="android:windowBackground">@color/gofun</item>
+        
+        <!-- Status bar -->
+        <item name="android:statusBarColor">@color/indigo_dark</item>
+    </style>
+    
+    <!-- Heading style - elegant serif -->
+    <style name="Kantoku.Heading" parent="TextAppearance.Material3.HeadlineLarge">
+        <item name="android:fontFamily">serif</item>
+        <item name="android:textColor">@color/sumi</item>
+        <item name="android:letterSpacing">0.05</item>
+    </style>
+    
+    <style name="Kantoku.Heading.Large" parent="Kantoku.Heading">
+        <item name="android:textSize">36sp</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+    
+    <style name="Kantoku.Heading.Medium" parent="Kantoku.Heading">
+        <item name="android:textSize">24sp</item>
+    </style>
+    
+    <style name="Kantoku.Heading.Small" parent="Kantoku.Heading">
+        <item name="android:textSize">18sp</item>
+    </style>
+    
+    <!-- Body text - clean sans-serif -->
+    <style name="Kantoku.Body" parent="TextAppearance.Material3.BodyLarge">
+        <item name="android:fontFamily">sans-serif-light</item>
+        <item name="android:textColor">@color/sumi_light</item>
+        <item name="android:lineSpacingMultiplier">1.4</item>
+    </style>
+    
+    <style name="Kantoku.Body.Secondary" parent="Kantoku.Body">
+        <item name="android:textColor">@color/hai</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+    
+    <!-- Japanese vertical accent text -->
+    <style name="Kantoku.Vertical" parent="TextAppearance.Material3.BodyMedium">
+        <item name="android:fontFamily">serif</item>
+        <item name="android:textColor">@color/hai</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:letterSpacing">0.3</item>
+    </style>
+    
+    <!-- Card style - paper-like -->
+    <style name="Kantoku.Card" parent="Widget.Material3.CardView.Filled">
+        <item name="cardBackgroundColor">@color/gofun_dark</item>
+        <item name="cardCornerRadius">4dp</item>
+        <item name="cardElevation">1dp</item>
+    </style>
+    
+    <!-- Button styles -->
+    <style name="Kantoku.Button.Primary" parent="Widget.Material3.Button">
+        <item name="android:backgroundTint">@color/indigo</item>
+        <item name="android:textColor">@color/shironeri</item>
+        <item name="cornerRadius">4dp</item>
+    </style>
+    
+    <style name="Kantoku.Button.Secondary" parent="Widget.Material3.Button.OutlinedButton">
+        <item name="strokeColor">@color/indigo</item>
+        <item name="android:textColor">@color/indigo</item>
+        <item name="cornerRadius">4dp</item>
+    </style>
+    
+    <!-- Text input style -->
+    <style name="Kantoku.TextInput" parent="Widget.Material3.TextInputLayout.OutlinedBox">
+        <item name="boxStrokeColor">@color/indigo</item>
+        <item name="hintTextColor">@color/hai</item>
+        <item name="boxCornerRadiusTopStart">4dp</item>
+        <item name="boxCornerRadiusTopEnd">4dp</item>
+        <item name="boxCornerRadiusBottomStart">4dp</item>
+        <item name="boxCornerRadiusBottomEnd">4dp</item>
     </style>
 </resources>

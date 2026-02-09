@@ -4,58 +4,99 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="16dp">
+    android:background="@color/sumi">
 
-    <!-- Camera Preview -->
-    <androidx.camera.view.PreviewView
-        android:id="@+id/viewFinder"
+    <!-- Camera Preview with subtle border -->
+    <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1" />
+        android:layout_weight="1"
+        android:padding="2dp"
+        android:background="@color/indigo_dark">
 
-    <!-- Status -->
-    <TextView
-        android:id="@+id/tvStatus"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Status: Initializing..."
-        android:textSize="14sp"
-        android:padding="8dp"
-        android:background="#E0E0E0"
-        android:layout_marginTop="8dp" />
+        <androidx.camera.view.PreviewView
+            android:id="@+id/viewFinder"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
 
-    <!-- Last Action -->
-    <TextView
-        android:id="@+id/tvLastAction"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Last action: None"
-        android:textSize="12sp"
-        android:padding="8dp"
-        android:layout_marginTop="4dp" />
+        <!-- Vertical accent overlay -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="監\n督"
+            android:textSize="10sp"
+            android:fontFamily="serif"
+            android:textColor="#44FFFFFF"
+            android:letterSpacing="0.3"
+            android:lineSpacingMultiplier="0.7"
+            android:layout_gravity="top|end"
+            android:padding="8dp" />
 
-    <!-- Control Buttons -->
+    </FrameLayout>
+
+    <!-- Status Panel -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="8dp">
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:background="@color/gofun">
 
-        <Button
-            android:id="@+id/btnConnect"
-            android:layout_width="0dp"
+        <!-- Status -->
+        <TextView
+            android:id="@+id/tvStatus"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Connect Device"
-            android:layout_marginEnd="4dp" />
+            android:text="Initializing..."
+            android:textSize="16sp"
+            android:fontFamily="serif"
+            android:textColor="@color/sumi"
+            android:padding="12dp"
+            android:background="@color/gofun_dark" />
 
-        <Button
-            android:id="@+id/btnStart"
-            android:layout_width="0dp"
+        <!-- Last Action / Time Remaining -->
+        <TextView
+            android:id="@+id/tvLastAction"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Start"
-            android:layout_marginStart="4dp" />
+            android:text="Awaiting connection"
+            android:textSize="13sp"
+            android:fontFamily="sans-serif-light"
+            android:textColor="@color/hai"
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp" />
+
+        <!-- Control Buttons -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp">
+
+            <Button
+                android:id="@+id/btnConnect"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:layout_weight="1"
+                android:text="Connect"
+                android:layout_marginEnd="8dp"
+                android:textColor="@color/indigo"
+                app:strokeColor="@color/indigo"
+                app:cornerRadius="4dp"
+                style="@style/Widget.Material3.Button.OutlinedButton" />
+
+            <Button
+                android:id="@+id/btnStart"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:layout_weight="1"
+                android:text="Stop"
+                android:layout_marginStart="8dp"
+                android:backgroundTint="@color/indigo"
+                android:textColor="@color/shironeri"
+                app:cornerRadius="4dp" />
+        </LinearLayout>
+
     </LinearLayout>
 
 </LinearLayout>

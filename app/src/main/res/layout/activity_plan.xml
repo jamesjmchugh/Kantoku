@@ -5,9 +5,9 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="24dp"
-    android:background="#1a1a2e">
+    android:background="@color/gofun">
 
-    <!-- Header -->
+    <!-- Header with vertical accent -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -15,20 +15,23 @@
         android:gravity="center_vertical"
         android:layout_marginBottom="24dp">
 
+        <!-- Vertical kanji accent -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="🤖"
-            android:textSize="32sp" />
+            android:text="監督"
+            android:textSize="12sp"
+            android:fontFamily="serif"
+            android:textColor="@color/hai"
+            android:letterSpacing="0.2"
+            android:rotation="-90"
+            android:layout_marginEnd="8dp" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Kantoku"
-            android:textSize="24sp"
-            android:textStyle="bold"
-            android:textColor="#ffffff"
-            android:layout_marginStart="12dp" />
+            style="@style/Kantoku.Heading.Medium" />
     </LinearLayout>
 
     <!-- Task Card -->
@@ -36,8 +39,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
-        app:cardCornerRadius="16dp"
-        app:cardElevation="4dp">
+        app:cardCornerRadius="4dp"
+        app:cardElevation="1dp"
+        app:cardBackgroundColor="@color/gofun_dark">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -48,15 +52,20 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="What should I do?"
-                android:textSize="18sp"
-                android:textStyle="bold"
+                android:text="Task"
+                style="@style/Kantoku.Heading.Small"
                 android:layout_marginBottom="12dp" />
 
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Describe the task..."
+                android:hint="Describe what should be done..."
+                app:boxStrokeColor="@color/indigo"
+                app:hintTextColor="@color/hai"
+                app:boxCornerRadiusTopStart="4dp"
+                app:boxCornerRadiusTopEnd="4dp"
+                app:boxCornerRadiusBottomStart="4dp"
+                app:boxCornerRadiusBottomEnd="4dp"
                 style="@style/Widget.Material3.TextInputLayout.OutlinedBox">
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -65,7 +74,10 @@
                     android:layout_height="wrap_content"
                     android:minLines="3"
                     android:gravity="top"
-                    android:inputType="textMultiLine" />
+                    android:inputType="textMultiLine"
+                    android:fontFamily="sans-serif-light"
+                    android:textColor="@color/sumi"
+                    android:lineSpacingMultiplier="1.3" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -77,8 +89,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
-        app:cardCornerRadius="16dp"
-        app:cardElevation="4dp">
+        app:cardCornerRadius="4dp"
+        app:cardElevation="1dp"
+        app:cardBackgroundColor="@color/gofun_dark">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -89,9 +102,8 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="How long should I try?"
-                android:textSize="18sp"
-                android:textStyle="bold"
+                android:text="Duration"
+                style="@style/Kantoku.Heading.Small"
                 android:layout_marginBottom="12dp" />
 
             <RadioGroup
@@ -105,14 +117,20 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="2 minutes"
-                    android:padding="8dp" />
+                    android:padding="12dp"
+                    android:fontFamily="sans-serif-light"
+                    android:textColor="@color/sumi_light"
+                    android:buttonTint="@color/indigo" />
 
                 <RadioButton
                     android:id="@+id/rb5min"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="5 minutes"
-                    android:padding="8dp"
+                    android:padding="12dp"
+                    android:fontFamily="sans-serif-light"
+                    android:textColor="@color/sumi_light"
+                    android:buttonTint="@color/indigo"
                     android:checked="true" />
 
                 <RadioButton
@@ -120,14 +138,20 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="10 minutes"
-                    android:padding="8dp" />
+                    android:padding="12dp"
+                    android:fontFamily="sans-serif-light"
+                    android:textColor="@color/sumi_light"
+                    android:buttonTint="@color/indigo" />
 
                 <RadioButton
                     android:id="@+id/rb30min"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="30 minutes"
-                    android:padding="8dp" />
+                    android:padding="12dp"
+                    android:fontFamily="sans-serif-light"
+                    android:textColor="@color/sumi_light"
+                    android:buttonTint="@color/indigo" />
 
             </RadioGroup>
 
@@ -145,11 +169,12 @@
         android:id="@+id/tvBluetoothStatus"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="📡 Not connected"
+        android:text="Not connected"
         android:textSize="14sp"
-        android:textColor="#aaaaaa"
+        android:fontFamily="sans-serif-light"
+        android:textColor="@color/hai"
         android:gravity="center"
-        android:layout_marginBottom="8dp" />
+        android:layout_marginBottom="16dp" />
 
     <!-- Buttons -->
     <LinearLayout
@@ -164,6 +189,9 @@
             android:layout_weight="1"
             android:text="Connect"
             android:layout_marginEnd="8dp"
+            android:textColor="@color/indigo"
+            app:strokeColor="@color/indigo"
+            app:cornerRadius="4dp"
             style="@style/Widget.Material3.Button.OutlinedButton" />
 
         <Button
@@ -171,9 +199,11 @@
             android:layout_width="0dp"
             android:layout_height="56dp"
             android:layout_weight="1"
-            android:text="Start"
+            android:text="Begin"
             android:layout_marginStart="8dp"
-            style="@style/Widget.Material3.Button" />
+            android:backgroundTint="@color/indigo"
+            android:textColor="@color/shironeri"
+            app:cornerRadius="4dp" />
 
     </LinearLayout>
 

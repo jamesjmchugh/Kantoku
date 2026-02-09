@@ -32,6 +32,13 @@ Some computers are locked down, managed by IT, or running legacy systems where y
 ### ♻️ Use That Old Phone
 That Android phone collecting dust in a drawer? It's now an autonomous operator. Give it a purpose.
 
+### 🟢 The Productive Mouse Jiggler
+You know those USB mouse jigglers people use to keep Slack green and prevent screen lock? Kantoku does that — except instead of wiggling pixels, it's actually doing your work.
+
+Step away for lunch. Run an errand. Touch grass. Kantoku keeps typing, clicking, and making progress on that spreadsheet, that research task, or that data entry job. Your status stays active because *real activity is happening*.
+
+It's not pretending you're at your desk. It's replacing you at your desk.
+
 ## Requirements
 
 - Android phone (Android 12+) with Bluetooth HID support

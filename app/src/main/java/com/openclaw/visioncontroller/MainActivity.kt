@@ -68,7 +68,7 @@ class MainActivity : AppCompatActivity() {
     private val maxConsecutiveWaits = 3      // After 3 WAITs, try a recovery prompt
     
     companion object {
-        private const val TAG = "CrisAI"  // Easy to grep
+        private const val TAG = "Kantoku"  // Easy to grep
         private const val REQUEST_PERMISSIONS = 1001
         
         private val REQUIRED_PERMISSIONS = arrayOf(
@@ -228,7 +228,7 @@ class MainActivity : AppCompatActivity() {
         }
         
         val sdpSettings = BluetoothHidDeviceAppSdpSettings(
-            "Cris AI",
+            "Kantoku",
             "AI-powered computer control",
             "OpenClaw",
             BluetoothHidDevice.SUBCLASS1_KEYBOARD,

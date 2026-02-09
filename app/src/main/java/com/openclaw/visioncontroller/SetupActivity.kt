@@ -12,7 +12,7 @@ import com.google.android.material.textfield.TextInputEditText
 class SetupActivity : AppCompatActivity() {
 
     companion object {
-        const val PREFS_NAME = "CrisAIPrefs"
+        const val PREFS_NAME = "KantokuPrefs"
         const val KEY_API_KEY = "anthropic_api_key"
         const val KEY_SETUP_COMPLETE = "setup_complete"
         
